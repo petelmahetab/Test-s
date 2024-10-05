@@ -21,12 +21,19 @@
             border: 2px solid black;
             
         }
+        b{
+            color: rgb(10, 72, 83);
+            font-size: 20px;
+        }
+        b:hover{
+            color: rgb(66, 17, 17);
+        }
         .input{
             margin-top: 50px;
            padding: 20px;
         }
         #integer{
-            
+            border-radius: 5px;
             height: 10%;
         }
         #press{
@@ -38,12 +45,53 @@
         }
         #press:hover{
             background-color: green;
+            border: none;
         }
         .table{
             margin-top: 10px;
             text-align: left;
             padding: 0 20px;
         }
+      #celsius{
+          height:10%;
+          border-radius: 5px;
+      }
+      #Fah{
+        margin:20px;
+        font-weight: bold;
+        width: 40%;
+        height: 10%;
+        border-radius: 20px;
+      }
+      #Fah:hover{
+        background-color: green;
+        border: none;
+      }
+      .table{
+          color:rgb(66, 17, 17);
+          font-weight: bold;
+          font-size: 1vw;
+      }
+      #Fahrenheit{
+          font-size: 2vw;
+          color:rgb(66, 17, 17);
+          font-weight: bold;
+      }
+      .container2{
+        height: 350px;
+        width:280px;
+        background-color: rgb(14, 82, 109);
+        border-radius: 10px;
+        text-align: center;
+        padding: 30px;
+        margin:20px 20px;
+        box-shadow: 30px 30px 25px rgb(39, 38, 38);
+        border: 2px solid black;
+        margin-top: 40px;
+      }
+      #head{
+          color: rgb(156, 11, 40);
+      }
     </style>
 </head>
 <body>
@@ -58,14 +106,33 @@ displays the multiplication table for that number (up to 10) -->
         <div class="table"></div>
     </div>
 
-    <!-- Celsius to Fahrenheit Converter (5 marks):
+    <!-- 2.  Celsius to Fahrenheit Converter (5 marks):
     Write a JavaScript function that takes input for a temperature in 
     Celsius from the user and converts it into Fahrenheit using the 
     formula: Fahrenheit=(Celsius×9/5)+32 -->
 
-    <div class="container">
-       
+    <div class="container2">
+       <label for="celsius"><b id="head">Enter Celsius value</b></label>
+       <input type="number" id="celsius">
+
+       <button id="Fah">Get Fahrenheit </button>
+       <div id="Fahrenheit"></div>
     </div>
+
+    <!--3.  Positive or Negative Number Checker (5 marks):
+Write a JavaScript function that takes a number as input and 
+displays whether the number is positive or negative. -->
+<div class="container">
+    <label for="value" class="input"><b>Enter any Value to check </b></label>
+    <input type="number" id="value">
+    <button id="checking">Check</button>
+    <!-- this is For result -->
+    <div class="hints">
+        <h1>Number is Less than 0 <br> NEGATIVE(-) / POSITIVE(+) </h1>
+    </div>
+    <div class="table"></div>
+</div>
+
     <script src="JavaScript.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@
 //  Write a JavaScript function that takes a number as input and 
 // // displays the multiplication table for that number (up to 10) ;
 
+// - =>
 // select button
 const getBtn=document.querySelector('#press');
 getBtn.addEventListener('click',function(){
@@ -25,7 +26,7 @@ getBtn.addEventListener('click',function(){
         tab+=getNumber+'*'+i+'='+(getNumber*i)+'<br>';
     }
 // Now display on UI using 
-printTable.style.margin='4px';
+
      printTable.innerHTML=tab;
 })
 
@@ -34,3 +35,30 @@ printTable.style.margin='4px';
 // Write a JavaScript function that takes input for a temperature in 
 // Celsius from the user and converts it into Fahrenheit using the 
 // formula: Fahrenheit=(Celsius×9/5)+32
+ 
+// - =>
+// select Button
+const convert=document.querySelector('#Fah');
+convert.addEventListener('click',function(){
+    // Now Get Input (value ) property which get actual value entered by User
+    const getCelsius=document.querySelector('#celsius').value;
+    const returnFahrenheit=document.querySelector('#Fahrenheit');
+    //starting will assign empty string.
+    returnFahrenheit.innerHTML='';
+
+    //User not Enterd any Celsius value
+    if(getCelsius=== ''){
+        returnFahrenheit.innerHTML='Please Fill there Celsius.';
+        return ;
+    }
+    // Convert
+    let formula='After Conversion <br><br>'+getCelsius+'  °C =>  ';
+
+    formula+=(getCelsius*9/5)+32;
+
+    returnFahrenheit.innerHTML=formula+'°F';
+    
+})
+
+
+
